@@ -14,16 +14,12 @@ MNIST, CIFAR - 10 말고 !
 
 
 #### 쿠로코의 농구
-
-
 ![60136-kuroko_no_basket-blue-basketball](https://user-images.githubusercontent.com/35001605/50537882-8c231a00-0ba9-11e9-8da4-a438b7342c03.jpg)
 
 #### 쿠로코
-
 ![65d739597a4f1bfd7085615cadf2c38e1367394101_full](https://user-images.githubusercontent.com/35001605/50537884-8fb6a100-0ba9-11e9-9d3b-ae820249f4c8.png)
 
 #### 카가미
-
 ![kurokonobaske_a03](https://user-images.githubusercontent.com/35001605/50537883-8e857400-0ba9-11e9-9982-adedbc1e16f0.jpg)
 
 ### 2. 우선 데이터 수집부터!
@@ -34,6 +30,6 @@ MNIST, CIFAR - 10 말고 !
 
 ![example_dataset](https://user-images.githubusercontent.com/35001605/50537659-f46ffc80-0ba5-11e9-9441-6f7e988447a6.PNG)
 
-### 3. 텐서플로 코딩 시작!
+### 3. 파이썬 + 텐서플로 코딩 시작! (부제: 천리길도 한 걸음부터)
 
-### 3.1 텐서플로를 이용하여 
+### 3.1 파이썬과 텐서플로를 이용하여 이미지 파
