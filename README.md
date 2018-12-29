@@ -30,6 +30,6 @@ MNIST, CIFAR - 10 말고 !
 
 ![example_dataset](https://user-images.githubusercontent.com/35001605/50537659-f46ffc80-0ba5-11e9-9441-6f7e988447a6.PNG)
 
-### 3. 코딩 시작! (부제: 천리길도 한 걸음부터)
+### 3. 코딩 시작!
 
 ### 3.1 파이썬과 텐서플로를 이용하여 이미지 파일을 읽어보자.
