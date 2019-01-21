@@ -1,4 +1,4 @@
-# Training-your-won-data-set-into-the-CNN-model-in-TF
+# Training-your-won-data-set-into-the-CNN-model-in-Pytorch
 
 VGG, Inception, Resnet 말고 !
 
@@ -31,5 +31,3 @@ MNIST, CIFAR - 10 말고 !
 ![example_dataset](https://user-images.githubusercontent.com/35001605/50537659-f46ffc80-0ba5-11e9-9441-6f7e988447a6.PNG)
 
 ### 3. 코딩 시작!
-
-### 3.1 파이썬과 텐서플로를 이용하여 이미지 파일을 읽어보자.
