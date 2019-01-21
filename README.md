@@ -26,7 +26,7 @@ MNIST, CIFAR - 10 말고 !
 
 정면 얼굴이 나온 사진을 위주로 쿠로코 60장, 카가미 60 장 수집
 
-![다운로드](https://drive.google.com/open?id=1dQePxrd9xdtvLr9E-jiUb-TdyWG1EFlJ)
+[다운로드 ](https://drive.google.com/open?id=1dQePxrd9xdtvLr9E-jiUb-TdyWG1EFlJ)
 
 #### 데이터 셋 예시
 
