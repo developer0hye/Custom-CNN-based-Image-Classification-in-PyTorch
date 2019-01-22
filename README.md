@@ -1,4 +1,4 @@
-# Training-your-won-data-set-into-the-CNN-model-in-Pytorch
+# Custom-CNN-Based-Classifier-in-Pytorch
 
 VGG, Inception, Resnet 말고 !
 
@@ -24,7 +24,7 @@ MNIST, CIFAR - 10 말고 !
 
 ### 2. 우선 데이터 수집부터!
 
-정면 얼굴이 나온 사진을 위주로 쿠로코 60장, 카가미 60 장 수집
+정면 얼굴이 나온 사진을 위주로 쿠로코 60장, 카가미 60 장 수집(데이터 양이 너무 적다.)
 
 [다운로드 ](https://drive.google.com/open?id=1dQePxrd9xdtvLr9E-jiUb-TdyWG1EFlJ)
 
@@ -33,3 +33,8 @@ MNIST, CIFAR - 10 말고 !
 ![example_dataset](https://user-images.githubusercontent.com/35001605/50537659-f46ffc80-0ba5-11e9-9441-6f7e988447a6.PNG)
 
 ### 3. 코딩 시작!
+
+#### 3.1 프로젝트 생성
+#### 3.1.1
+
+
