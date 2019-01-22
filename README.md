@@ -24,7 +24,7 @@ MNIST, CIFAR - 10 말고 !
 
 ### 2. 우선 데이터 수집부터!
 
-정면 얼굴이 나온 사진을 위주로 쿠로코 60장, 카가미 60 장 수집(데이터 양이 너무 적다.)
+정면 얼굴이 나온 사진을 위주로 쿠로코 60장, 카가미 60 장 수집
 
 [다운로드 ](https://drive.google.com/open?id=1dQePxrd9xdtvLr9E-jiUb-TdyWG1EFlJ)
 
