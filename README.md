@@ -17,21 +17,23 @@
 * PIL
 
 추가적으로 NVIDIA GPU 를 사용하신다면 CUDA 와 CUDNN 을 설치하는 것을 권장합니다.
-### Dataset
+### Custom Dataset
 
-만화 **"쿠로코의 농구"** 의 등장 인물인 **"쿠로코"** 와 **"카가미"** 를 분류해보겠습니다.
+본 튜토리얼에서는 만화 **"쿠로코의 농구"** 의 등장 인물인 **"쿠로코"** 와 **"카가미"** 를 분류해보겠습니다.
 
+#### Kuroko's Basketball
 
-#### 쿠로코의 농구
 ![60136-kuroko_no_basket-blue-basketball](https://user-images.githubusercontent.com/35001605/50537882-8c231a00-0ba9-11e9-8da4-a438b7342c03.jpg)
 
-#### 쿠로코
+#### Kuroko
+
 ![65d739597a4f1bfd7085615cadf2c38e1367394101_full](https://user-images.githubusercontent.com/35001605/50537884-8fb6a100-0ba9-11e9-9d3b-ae820249f4c8.png)
 
-#### 카가미
+#### Kagami
+
 ![kurokonobaske_a03](https://user-images.githubusercontent.com/35001605/50537883-8e857400-0ba9-11e9-9982-adedbc1e16f0.jpg)
 
-### 2. 우선 데이터 수집부터!
+#### Dwonload
 
 정면 얼굴이 나온 사진을 위주로 쿠로코 60장, 카가미 60 장 수집
 
