@@ -7,10 +7,7 @@
 * Image Classifer 를 위한 **CNN(Convolutional Neural Network)** 기반의 모델 설계 방법
 * 기존의 데이터셋(MNIST, CIFAR-10 등)이 아닌 개인이 수집한 데이터셋을 처리하기 위한 PyTorch 의 **Dataset** 및 **DataLoader** 사용 방법
 
-본 튜토리얼에서는 Python 과 PyTorch 사용에 좀 더 익숙해지기 위하여 PyTorch 의 ImageFolder 를 사용하지 않습니다. 
-
-
-Python 및 PyTorch 사용 방법을 익히기 위해 ImageFolder 클래스를 사용하지 않고  직접 Dataset 클래스를 설계하는 방법에 대해 설명
+**본 튜토리얼에서는 Python 과 PyTorch 사용에 좀 더 능숙해지기 위하여 PyTorch 의 ImageFolder 를 사용하지 않습니다.**
 
 ## 뭐 부터 해야되지?
 
