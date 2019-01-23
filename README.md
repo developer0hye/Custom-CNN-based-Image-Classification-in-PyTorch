@@ -22,8 +22,6 @@
 
 본 튜토리얼에서는 만화 **"쿠로코의 농구"** 의 등장 인물인 **"쿠로코"** 와 **"카가미"** 를 분류해보겠습니다.
 
-#### Kuroko's Basketball
-
 ![60136-kuroko_no_basket-blue-basketball](https://user-images.githubusercontent.com/35001605/50537882-8c231a00-0ba9-11e9-8da4-a438b7342c03.jpg)
 
 #### Kuroko
@@ -34,9 +32,15 @@
 
 ![kurokonobaske_a03](https://user-images.githubusercontent.com/35001605/50537883-8e857400-0ba9-11e9-9982-adedbc1e16f0.jpg)
 
-#### Download
+#### Examples
 
 정면 얼굴이 나온 사진을 위주로 쿠로코 60장, 카가미 60 장 수집
+
+![example_dataset2](https://user-images.githubusercontent.com/35001605/51581546-d929b000-1f0b-11e9-96ff-bcf704913ec0.PNG)
+
+*쿠로코 사진 삽입*
+
+#### Download
 
 [다운로드 ](https://drive.google.com/open?id=1dQePxrd9xdtvLr9E-jiUb-TdyWG1EFlJ)
 
@@ -56,9 +60,7 @@ data/
       *.png
 ```
 
-#### Dataset Examples(files in "data/train/kagami")
 
-![example_dataset2](https://user-images.githubusercontent.com/35001605/51581546-d929b000-1f0b-11e9-96ff-bcf704913ec0.PNG)
 
 
 ## Data pre-processing and data augmentation
