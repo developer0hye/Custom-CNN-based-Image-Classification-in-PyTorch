@@ -34,13 +34,12 @@
 
 ![kurokonobaske_a03](https://user-images.githubusercontent.com/35001605/50537883-8e857400-0ba9-11e9-9982-adedbc1e16f0.jpg)
 
-#### Dwonload
+#### Download
 
 정면 얼굴이 나온 사진을 위주로 쿠로코 60장, 카가미 60 장 수집
 
 [다운로드 ](https://drive.google.com/open?id=1dQePxrd9xdtvLr9E-jiUb-TdyWG1EFlJ)
 
-#### 데이터 셋 예시
 
 ```
 data/
@@ -61,9 +60,6 @@ data/train/kagami
 ![example_dataset2](https://user-images.githubusercontent.com/35001605/51581546-d929b000-1f0b-11e9-96ff-bcf704913ec0.PNG)
 
 
-### 3. 코딩 시작!
-
-#### 3.1 프로젝트 생성
-#### 3.1.1
+## Data pre-processing and data augmentation
 
 
