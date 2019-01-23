@@ -40,7 +40,6 @@
 
 [다운로드 ](https://drive.google.com/open?id=1dQePxrd9xdtvLr9E-jiUb-TdyWG1EFlJ)
 
-
 ```
 data/
   train/
@@ -55,7 +54,7 @@ data/
       *.png
 ```
 
-#### Examples(data/train/kagami)
+#### Examples(files in "data/train/kagami")
 
 ![example_dataset2](https://user-images.githubusercontent.com/35001605/51581546-d929b000-1f0b-11e9-96ff-bcf704913ec0.PNG)
 
