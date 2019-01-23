@@ -2,9 +2,12 @@
 
 이번 튜토리얼에서는 **PyTorch** 를 사용하여 **Image Classifier** 를 만들어보도록 하겠습니다.
 
-본 튜토리얼을 통해 아래의 기법을 배울 수 있습니다.
+본 튜토리얼을 통해 다음 방법들을 배울 수 있습니다.
 
 * Image Classifer 를 위한 CNN(Convolutional Neural Network) 기반의 모델 설계 방법
+* PyTorch 의 Dataset 설계 및 DataLoader 사용 방법 
+
+(Python 및 PyTorch 사용법을 익히기 위해 ImageFolder 클래스를 사용하지 않고  직접 Dataset 클래스를 설계하는 방법에 대해 설명합니다.) 
 
 MNIST, CIFAR-10 등 기존에 존재하는 데이터 셋이 아닌 개인이 직접 수집한 데이터 셋으
 
