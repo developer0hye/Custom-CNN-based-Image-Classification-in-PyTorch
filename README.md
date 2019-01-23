@@ -5,7 +5,7 @@
 본 튜토리얼을 통해 다음 방법들을 배울 수 있습니다.
 
 * **CNN(Convolutional Neural Network)** 기반의 **Image Classifer** 모델 설계 방법
-* 기존의 데이터셋(MNIST, CIFAR-10 등)이 아닌 개인이 수집한 데이터셋을 처리하기 위한 **PyTorch** 의 **Dataset** 및 **DataLoader** 사용 방법
+* 기존의 데이터셋(MNIST, CIFAR-10 등)이 아닌 Custom Dataset(개인이 수집한 데이터셋)을 처리하기 위한 **PyTorch** 의 **Dataset** 및 **DataLoader** 사용 방법
 
 **본 튜토리얼에서는 PyTorch 의 Dataset 및 DataLoader 사용에 능숙해지기 위하여 PyTorch 의 ImageFolder 를 사용하지 않습니다.**
 
@@ -54,11 +54,44 @@ data/
       *.png
 ```
 
-#### Examples(files in "data/train/kagami")
+#### Dataset Examples(files in "data/train/kagami")
 
 ![example_dataset2](https://user-images.githubusercontent.com/35001605/51581546-d929b000-1f0b-11e9-96ff-bcf704913ec0.PNG)
 
 
 ## Data pre-processing and data augmentation
+
+PyTorch 에는 데이터셋에 대한 처리를 용이하게 하기 위하여 **Dataset** 과 **DataLoader** 라는 클래스를 제공합니다.
+
+간단하게 설명드리자면 
+
+**Dataset** 클래스는 torch.utils.data.Dataset 에 정의된 추상 클래스(Abstract class) 로써,
+
+**DataLoader**는 **Dataset** 에  
+
+
+### Dataset Class
+
+Dataset 클래스는 torch.utils.data.Dataset 에 정의된 추상 클래스(Abstract class) 로써, Custom Dataset 에 대한 작업을 수행하기 위하여 Dataset 클래스를 상속받고 
+
+Dataset 은 데이터를 읽고, DataLoader 는 Dataset 클래스에 정의된  
+
+
+```python
+from torch.utils.data.dataset import Dataset
+
+class MyCustomDataset(Dataset):
+    def __init__(self, ...):
+        # stuff
+        
+    def __getitem__(self, index):
+        # stuff
+        return (img, label)
+
+    def __len__(self):
+        return count # of how many examples(images?) you have
+```
+
+Dataset 클래스의 형태는 위와 같습니다.
 
 
