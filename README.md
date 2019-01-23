@@ -4,12 +4,13 @@
 
 본 튜토리얼을 통해 다음 방법들을 배울 수 있습니다.
 
-* Image Classifer 를 위한 **CNN(Convolutional Neural Network)** 기반의 모델 설계 방법
+* **CNN(Convolutional Neural Network)** 기반의 Image Classifer 모델 설계 방법
 * 기존의 데이터셋(MNIST, CIFAR-10 등)이 아닌 개인이 수집한 데이터셋을 처리하기 위한 PyTorch 의 **Dataset** 및 **DataLoader** 사용 방법
 
-**본 튜토리얼에서는 Python 과 PyTorch 사용에 좀 더 능숙해지기 위하여 PyTorch 의 ImageFolder 를 사용하지 않습니다.**
+**본 튜토리얼에서는 PyTorch 의 Dataset 및 DataLoader 사용에 능숙해지기 위하여 PyTorch 의 ImageFolder 를 사용하지 않습니다.**
 
-## 뭐 부터 해야되지?
+## Setup
+
 
 ### 1. 어떤 이미지를 분류할 것인가??
 
