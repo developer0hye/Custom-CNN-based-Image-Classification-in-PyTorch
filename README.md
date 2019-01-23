@@ -40,6 +40,8 @@
 
 [다운로드 ](https://drive.google.com/open?id=1dQePxrd9xdtvLr9E-jiUb-TdyWG1EFlJ)
 
+데이터셋은 학습을 위한 Train 폴더와 성능 평가를 위한 Test 폴더로 나누어져 있으며 각 폴더에는 분류를 수행하고자 하는 이미지 클래스별로 하위 폴더가 존재하며 폴더 안에는 이미지가 저장되어 있습니다.  
+
 ```
 data/
   train/
