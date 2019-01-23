@@ -17,6 +17,7 @@
 * PIL
 
 추가적으로 NVIDIA GPU 를 사용하신다면 CUDA 와 CUDNN 을 설치하는 것을 권장합니다.
+
 ### Custom Dataset
 
 본 튜토리얼에서는 만화 **"쿠로코의 농구"** 의 등장 인물인 **"쿠로코"** 와 **"카가미"** 를 분류해보겠습니다.
@@ -41,7 +42,24 @@
 
 #### 데이터 셋 예시
 
-![example_dataset](https://user-images.githubusercontent.com/35001605/50537659-f46ffc80-0ba5-11e9-9441-6f7e988447a6.PNG)
+```
+data/
+  train/
+    kuroko/
+      *.png
+    kagami/
+      *.png
+  test/
+    kuroko/
+      *.png
+    kagami/
+      *.png
+```
+
+data/train/kagami
+
+![example_dataset2](https://user-images.githubusercontent.com/35001605/51581546-d929b000-1f0b-11e9-96ff-bcf704913ec0.PNG)
+
 
 ### 3. 코딩 시작!
 
