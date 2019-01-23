@@ -55,7 +55,7 @@ data/
       *.png
 ```
 
-data/train/kagami
+#### Examples(data/train/kagami)
 
 ![example_dataset2](https://user-images.githubusercontent.com/35001605/51581546-d929b000-1f0b-11e9-96ff-bcf704913ec0.PNG)
 
