@@ -5,14 +5,19 @@
 본 튜토리얼을 통해 다음 방법들을 배울 수 있습니다.
 
 * **CNN(Convolutional Neural Network)** 기반의 **Image Classifer** 모델 설계 방법
-* 기존의 데이터셋(MNIST, CIFAR-10 등)이 아닌 개인이 수집한 데이터셋을 처리하기 위한 PyTorch 의 **Dataset** 및 **DataLoader** 사용 방법
+* 기존의 데이터셋(MNIST, CIFAR-10 등)이 아닌 개인이 수집한 데이터셋을 처리하기 위한 **PyTorch** 의 **Dataset** 및 **DataLoader** 사용 방법
 
 **본 튜토리얼에서는 PyTorch 의 Dataset 및 DataLoader 사용에 능숙해지기 위하여 PyTorch 의 ImageFolder 를 사용하지 않습니다.**
 
 ## Setup
 
+### Prerequisite
+본 튜토리얼에 앞서 다음의 라이브러리들을 필요로 합니다.
+* PyTorch
+* PIL
 
-### 데이터셋
+추가적으로 NVIDIA GPU 를 사용하신다면 CUDA 와 CUDNN 을 설치하는 것을 권장합니다.
+### Dataset
 
 만화 **"쿠로코의 농구"** 의 등장 인물인 **"쿠로코"** 와 **"카가미"** 를 분류해보겠습니다.
 
