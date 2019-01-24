@@ -63,11 +63,11 @@ data/
       *.png
 ```
 
-## Data pre-processing and data augmentation
+## Data Loading and Processing
 
 PyTorch 에는 데이터셋에 대한 처리를 용이하게 하기 위하여 **Dataset** 과 **DataLoader** 클래스를 제공합니다.
 
-**Dataset** 클래스는 torch.utils.data.Dataset 에 정의된 추상 클래스(Abstract class) 로써 사용자는 **Custom Dataset**를 읽기 위하여 **Dataset** 클래스를 상속받는 클래스를 작성해야 합니다.
+**Dataset** 클래스는 torch.utils.data.Dataset 에 정의된 추상 클래스(Abstract class) 로써 사용자는 **Custom Dataset** 을 읽기 위하여 **Dataset** 클래스를 상속받는 클래스를 작성해야 합니다.
 
 **DataLoader**는 **Dataset** 클래스를 상속받는 클래스에 정의된 작업에 따라 데이터를 읽어오며, 이때 설정에 따라 원하는 **배치(Batch) 크기**로 데이터를 읽어올 수 있고 병렬 처리 설정, 데이터 셔플(Shuffle) 등의 작업을 설정할 수 있습니다.
 
@@ -99,9 +99,11 @@ class MyCustomDataset(Dataset):
 
 * `__len__()`
 
-`__init__()` 함수는 클래스 생성자로써 데이터에 대한 Transform(변환, Augmentation 등)을 설정하고 데이터를 읽기 위한 기초적인 초기화 작업들을 수행하도록 정의합니다.
+`__init__()` 함수는 클래스 생성자로써 데이터에 대한 Transform(데이터 형 변환, Augmentation 등)을 설정하고 데이터를 읽기 위한 기초적인 초기화 작업들을 수행하도록 정의합니다.
 
-`__getitem__()` 함수는 **Custom Dataset** 에 존재하는 데이터를 읽고 반환하는 함수입니다. 따라서 본인이 어떤 작업을 수행하는지에 따라 반환하는 값들이 달라질 수 있습니다. 본 튜토리얼에서 구현할 작업은 **Image Classifer** 이므로 이미지를 반환하고, 해당 이미지가 어떤 클래스에 속하는지에 대한 값을 반환할 것입니다.
+`__getitem__()` 함수는 **Custom Dataset** 에 존재하는 데이터를 읽고 반환하는 함수입니다. 따라서 본인이 어떤 작업을 수행하는지에 따라 반환하는 값들이 달라질 수 있습니다. 본 튜토리얼에서 구현할 작업은 **Image Classifer** 이므로 이미지를 반환하고, 해당 이미지가 어떤 클래스에 속하는지에 대한 값을 반환할 것입니다. 주의할 점은 `__getitem__()` 을 통해 반환되는 값이 PyTorch 에서 처리 가능한 데이터 타입(tensor, numpy array etc.)이 아닐 경우, **DataLoader** 를 통해 데이터를 읽을 때 다음과 같은 에러가 발생될 것입니다.
 
-`__len__()` 함수는 데이터 셋의 크기를 반환하는 함수입니다. 예를 들어 데이터셋에 이미지가 50장이 있을 때, `__len__()` 함수는 50을 반환합니다.
+`TypeError: batch must contain tensors, numbers, dicts or lists; found <class 'PIL.PngImagePlugin.PngImageFile'>`
+
+`__len__()` 함수는 데이터 셋의 크기를 반환하는 함수입니다. **Image Classifer** 로 예를 들면, 우리가 가진 이미지의 갯수가 곧 데이터 셋의 크기를 의미하게 됩니다. 즉 50장을 가지고 있다면 `__len__()` 함수는 50 을 반환해야 합니다.
 
