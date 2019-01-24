@@ -1,6 +1,6 @@
 # Custom-CNN-Based-Classifier-in-PyTorch
 
-이번 튜토리얼에서는 **PyTorch** 를 사용하여 **Image Classifier** 를 만들어보도록 하겠습니다.
+본 튜토리얼에서는 **PyTorch** 를 사용하여 **Image Classifier** 를 만들어보도록 하겠습니다.
 
 본 튜토리얼을 통해 다음 방법들을 배울 수 있습니다.
 
@@ -12,6 +12,7 @@
 ## Setup
 
 ### Prerequisite
+
 본 튜토리얼에 앞서 다음의 라이브러리들을 필요로 합니다.
 * PyTorch
 * PIL
@@ -64,11 +65,13 @@ data/
 
 ## Data pre-processing and data augmentation
 
-PyTorch 에는 데이터셋에 대한 처리를 용이하게 하기 위하여 **Dataset** 과 **DataLoader** 라는 클래스를 제공합니다.
+PyTorch 에는 데이터셋에 대한 처리를 용이하게 하기 위하여 **Dataset** 과 **DataLoader** 클래스를 제공합니다.
 
 **Dataset** 클래스는 torch.utils.data.Dataset 에 정의된 추상 클래스(Abstract class) 로써 사용자는 본인이 소유한 데이터를 읽어들이기 위하여 **Dataset** 클래스를 상속받는 클래스를 작성해야 합니다.
 
-**DataLoader**는 **Dataset** 을 상속받는 클래스에 정의된 작업에 따라 데이터를 읽어오며 파라미터에 따라 원하는 배치(Batch) 크기로 데이터를 읽어올 수 있고 병렬 처리 설정, 데이터 셔플(Shuffle) 등의 작업을 설정할 수 있습니다. 
+**DataLoader**는 **Dataset** 클래스를 상속받는 클래스에 정의된 작업에 따라 데이터를 읽어오며, 이때 설정에 따라 원하는 **배치(Batch) 크기**로 데이터를 읽어올 수 있고 병렬 처리 설정, 데이터 셔플(Shuffle) 등의 작업을 설정할 수 있습니다.
+
+본 튜토리얼에서는 **Dataset** 클래스를 상속받는 클래스를 **Dataset** 클래스라 칭하도록 하겠습니다.
 
 ### Dataset Class
 
@@ -88,4 +91,8 @@ class MyCustomDataset(Dataset):
     def __len__(self):
         return count # of how many examples(images?) you have
 ```
+
+__init__ 함수는 
+
+
 
