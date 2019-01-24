@@ -95,7 +95,7 @@ PyTorch 에는 데이터셋에 대한 처리를 용이하게 하기 위하여 **
 
 ### Dataset Class & DataLoader Class
 
-**Dataset** 클래스의 형태는 아래와 같습니다.
+일반적인 **Dataset** 클래스의 형태는 아래와 같습니다.
 
 ```python
 from torch.utils.data.dataset import Dataset
@@ -184,3 +184,5 @@ class CustomImageDataset(Dataset):
 ```
 
 **Image Classifer**를 위한 **Dataset** 클래스는 위와 같이 구현됩니다.
+
+
