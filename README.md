@@ -5,7 +5,7 @@
 본 튜토리얼을 통해 다음 방법들을 배울 수 있습니다.
 
 * **CNN(Convolutional Neural Network)** 기반의 **Image Classifer** 모델 설계 방법
-* 기존의 데이터셋(MNIST, CIFAR-10 등)이 아닌 Custom Dataset(개인이 수집한 데이터셋)을 처리하기 위한 **PyTorch** 의 **Dataset** 및 **DataLoader** 사용 방법
+* 기존의 데이터셋(MNIST, CIFAR-10 등)이 아닌 **Custom Dataset**(개인이 수집한 데이터셋)을 처리하기 위한 **PyTorch** 의 **Dataset** 및 **DataLoader** 사용 방법
 
 **본 튜토리얼에서는 PyTorch 의 Dataset 및 DataLoader 에 능숙해지기 위하여 PyTorch 의 ImageFolder 를 사용하지 않습니다.**
 
@@ -67,7 +67,7 @@ data/
 
 PyTorch 에는 데이터셋에 대한 처리를 용이하게 하기 위하여 **Dataset** 과 **DataLoader** 클래스를 제공합니다.
 
-**Dataset** 클래스는 torch.utils.data.Dataset 에 정의된 추상 클래스(Abstract class) 로써 사용자는 본인이 소유한 데이터를 읽어들이기 위하여 **Dataset** 클래스를 상속받는 클래스를 작성해야 합니다.
+**Dataset** 클래스는 torch.utils.data.Dataset 에 정의된 추상 클래스(Abstract class) 로써 사용자는 본인이 소유한 데이터를 읽기 위하여 **Dataset** 클래스를 상속받는 클래스를 작성해야 합니다.
 
 **DataLoader**는 **Dataset** 클래스를 상속받는 클래스에 정의된 작업에 따라 데이터를 읽어오며, 이때 설정에 따라 원하는 **배치(Batch) 크기**로 데이터를 읽어올 수 있고 병렬 처리 설정, 데이터 셔플(Shuffle) 등의 작업을 설정할 수 있습니다.
 
@@ -91,8 +91,13 @@ class MyCustomDataset(Dataset):
     def __len__(self):
         return count # of how many examples(images?) you have
 ```
+**Custom Dataset** 을 읽기 위하여 다음의 3가지 함수를 정의하여야 합니다.
 
-__init__ 함수는 
+* `__init__()` 
+
+* `__getitem__()`
+
+* `__len__()`
 
 
 
