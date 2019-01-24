@@ -127,11 +127,11 @@ class MyCustomDataset(Dataset):
 
 `TypeError: batch must contain tensors, numbers, dicts or lists; found <class 'PIL.PngImagePlugin.PngImageFile'>`
 
-`__len__()` 함수는 데이터셋의 크기를 반환하는 함수입니다. **Image Classifier** 로 예를 들면, 우리가 가진 이미지의 갯수가 곧 데이터셋의 크기를 의미하게 됩니다. 즉 50장을 가지고 있다면 `__len__()` 함수는 50 을 반환해야 합니다.
+`__len__()` 함수는 데이터셋의 크기를 반환하는 함수입니다. **Image Classifier** 로 예를 들면, 우리가 가진 이미지의 갯수가 곧 데이터셋의 크기 입니다. 즉 50장을 가지고 있다면 `__len__()` 함수는 50 을 반환해야 합니다.
 
 ### Programming
 
-#### module
+#### modules
 ```python
 import os
 from PIL import Image
@@ -141,7 +141,7 @@ from torch.utils.data import Dataset, DataLoader
 from torch import nn
 from torchvision import transforms
 ```
-#### Declare & Define funttion
+#### Declaration & Definition classes
 ```python
 class CustomImageDataset(Dataset):
     def read_data_set(self):
@@ -183,3 +183,4 @@ class CustomImageDataset(Dataset):
         return self.length
 ```
 
+**Image Classifer**를 위한 **Dataset** 클래스는 위와 같이 구현됩니다.
