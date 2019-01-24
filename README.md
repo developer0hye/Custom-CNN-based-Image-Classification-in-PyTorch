@@ -36,9 +36,9 @@
 
 정면 얼굴이 나온 사진을 위주로 쿠로코 60장, 카가미 60 장 수집
 
-![example_dataset2](https://user-images.githubusercontent.com/35001605/51581546-d929b000-1f0b-11e9-96ff-bcf704913ec0.PNG)
+![example_dataset3](https://user-images.githubusercontent.com/35001605/51650040-12285a00-1fca-11e9-95d1-189352ef2d58.PNG)
 
-*쿠로코 사진 삽입*
+![example_dataset2](https://user-images.githubusercontent.com/35001605/51650039-105e9680-1fca-11e9-89be-868234ae3241.PNG)
 
 #### Download
 
