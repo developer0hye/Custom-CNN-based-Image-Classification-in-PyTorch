@@ -44,7 +44,9 @@
 
 [다운로드 ](https://drive.google.com/open?id=1dQePxrd9xdtvLr9E-jiUb-TdyWG1EFlJ)
 
-데이터셋은 학습을 위한 Train 폴더와 성능 평가를 위한 Test 폴더로 나누어져 있으며 각 폴더에는 분류를 수행하고자 하는 이미지 클래스별로 하위 폴더가 존재하며 폴더 안에는 이미지가 저장되어 있습니다.
+데이터셋은 학습을 위한 train 폴더와 성능 평가를 위한 test 폴더로 나누어져 있습니다.
+
+train 폴더와 test 폴더 내부에는 분류하고자 하는 클래스별로 하위 폴더가 존재하며 각 하위 폴더에는 해당 클래스에 맞는 이미지들이 저장되어 있습니다.
 
 ```python
 data/
@@ -60,26 +62,17 @@ data/
       *.png
 ```
 
-
-
-
 ## Data pre-processing and data augmentation
 
 PyTorch 에는 데이터셋에 대한 처리를 용이하게 하기 위하여 **Dataset** 과 **DataLoader** 라는 클래스를 제공합니다.
 
-간단하게 설명드리자면 
+**Dataset** 클래스는 torch.utils.data.Dataset 에 정의된 추상 클래스(Abstract class) 로써 사용자는 본인이 소유한 데이터를 읽어들이기 위하여 **Dataset** 클래스를 상속받는 클래스를 작성해야 합니다.
 
-**Dataset** 클래스는 torch.utils.data.Dataset 에 정의된 추상 클래스(Abstract class) 로써,
-
-**DataLoader**는 **Dataset** 에  
-
+**DataLoader**는 **Dataset** 을 상속받는 클래스에 정의된 작업에 따라 데이터를 읽어오며 파라미터에 따라 원하는 배치(Batch) 크기로 데이터를 읽어올 수 있고 병렬 처리 설정, 데이터 셔플(Shuffle) 등의 작업을 설정할 수 있습니다. 
 
 ### Dataset Class
 
-Dataset 클래스는 torch.utils.data.Dataset 에 정의된 추상 클래스(Abstract class) 로써, Custom Dataset 에 대한 작업을 수행하기 위하여 Dataset 클래스를 상속받고 
-
-Dataset 은 데이터를 읽고, DataLoader 는 Dataset 클래스에 정의된  
-
+**Dataset** 클래스의 형태는 아래와 같습니다.
 
 ```python
 from torch.utils.data.dataset import Dataset
@@ -95,7 +88,4 @@ class MyCustomDataset(Dataset):
     def __len__(self):
         return count # of how many examples(images?) you have
 ```
-
-Dataset 클래스의 형태는 위와 같습니다.
-
 
