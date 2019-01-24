@@ -121,7 +121,7 @@ class MyCustomDataset(Dataset):
 
 `__init__()` 함수는 클래스 생성자로써 데이터에 대한 Transform(데이터 형 변환, Augmentation 등)을 설정하고 데이터를 읽기 위한 기초적인 초기화 작업들을 수행하도록 정의합니다.
 
-`__getitem__()` 함수는 **Custom Dataset** 에 존재하는 데이터를 읽고 반환하는 함수입니다. 따라서 본인이 어떤 작업을 수행하는지에 따라 반환하는 값들이 달라질 수 있습니다. 본 튜토리얼에서 구현할 작업은 **Image Classifier** 이므로 반환되는 값은 이미지와 해당 이미지가 어떤 클래스에 속하는지에 대한 값을 반환할 것입니다. 
+`__getitem__()` 함수는 **Custom Dataset** 에 존재하는 데이터를 읽고 반환하는 함수입니다. 따라서 본인이 어떤 작업을 수행하는지에 따라 반환하는 값들이 달라질 수 있습니다. 본 튜토리얼에서 구현할 작업은 **Image Classifier** 이므로 `__getitem__()` 함수는 이미지와 해당 이미지가 어떤 클래스에 속하는지에 대한 값을 반환할 것입니다.
 
 주의할 점은 `__getitem__()` 을 통해 반환되는 값이 PyTorch 에서 처리 가능한 데이터 타입(tensor, numpy array etc.)이 아닐 경우, **DataLoader** 를 통해 데이터를 읽을 때 다음과 같은 에러가 발생될 것입니다.
 
@@ -131,4 +131,55 @@ class MyCustomDataset(Dataset):
 
 ### Programming
 
+#### module
+```python
+import os
+from PIL import Image
+
+import torch
+from torch.utils.data import Dataset, DataLoader
+from torch import nn
+from torchvision import transforms
+```
+#### Declare & Define funttion
+```python
+class CustomImageDataset(Dataset):
+    def read_data_set(self):
+
+        all_img_files = []
+        all_labels = []
+
+        class_names = os.walk(self.data_set_path).__next__()[1]
+
+        for index, class_name in enumerate(class_names):
+            label = index
+            img_dir = os.path.join(self.data_set_path, class_name)
+            img_files = os.walk(img_dir).__next__()[2]
+
+            for img_file in img_files:
+                img_file = os.path.join(img_dir, img_file)
+                img = Image.open(img_file)
+                if img is not None:
+                    all_img_files.append(img_file)
+                    all_labels.append(label)
+
+        return all_img_files, all_labels, len(all_img_files), len(class_names)
+
+    def __init__(self, data_set_path, transform=None):
+        self.data_set_path = data_set_path
+        self.image_files_path, self.labels, self.length, self.num_classes = self.read_data_set()
+        self.transforms = transform
+
+    def __getitem__(self, index):
+        image = Image.open(self.image_files_path[index])
+        image = image.convert("RGB")
+
+        if self.transforms is not None:
+            image = self.transforms(image)
+
+        return {'image': image, 'label': self.labels[index]}
+
+    def __len__(self):
+        return self.length
+```
 
