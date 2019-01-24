@@ -4,7 +4,7 @@
 
 본 튜토리얼을 통해 다음 방법들을 배울 수 있습니다.
 
-* **CNN(Convolutional Neural Network)** 기반의 **Image Classifer** 모델 설계 방법
+* **CNN(Convolutional Neural Network)** 기반의 **Image Classifier** 모델 설계 방법
 * 기존의 데이터셋(MNIST, CIFAR-10 등)이 아닌 **Custom Dataset**(개인이 수집한 데이터셋)을 처리하기 위한 **PyTorch** 의 **Dataset** 및 **DataLoader** 사용 방법
 
 **본 튜토리얼에서는 PyTorch 의 Dataset 및 DataLoader 에 능숙해지기 위하여 PyTorch 의 ImageFolder 를 사용하지 않습니다.**
@@ -83,10 +83,6 @@ data/
       
 main.py
 ```
-
-
-
-
 ## Data Loading and Processing
 
 PyTorch 에는 데이터셋에 대한 처리를 용이하게 하기 위하여 **Dataset** 과 **DataLoader** 클래스를 제공합니다.
@@ -125,13 +121,14 @@ class MyCustomDataset(Dataset):
 
 `__init__()` 함수는 클래스 생성자로써 데이터에 대한 Transform(데이터 형 변환, Augmentation 등)을 설정하고 데이터를 읽기 위한 기초적인 초기화 작업들을 수행하도록 정의합니다.
 
-`__getitem__()` 함수는 **Custom Dataset** 에 존재하는 데이터를 읽고 반환하는 함수입니다. 따라서 본인이 어떤 작업을 수행하는지에 따라 반환하는 값들이 달라질 수 있습니다. 본 튜토리얼에서 구현할 작업은 **Image Classifer** 이므로 반환되는 값은 이미지와 해당 이미지가 어떤 클래스에 속하는지에 대한 값을 반환할 것입니다. 
+`__getitem__()` 함수는 **Custom Dataset** 에 존재하는 데이터를 읽고 반환하는 함수입니다. 따라서 본인이 어떤 작업을 수행하는지에 따라 반환하는 값들이 달라질 수 있습니다. 본 튜토리얼에서 구현할 작업은 **Image Classifier** 이므로 반환되는 값은 이미지와 해당 이미지가 어떤 클래스에 속하는지에 대한 값을 반환할 것입니다. 
 
 주의할 점은 `__getitem__()` 을 통해 반환되는 값이 PyTorch 에서 처리 가능한 데이터 타입(tensor, numpy array etc.)이 아닐 경우, **DataLoader** 를 통해 데이터를 읽을 때 다음과 같은 에러가 발생될 것입니다.
 
 `TypeError: batch must contain tensors, numbers, dicts or lists; found <class 'PIL.PngImagePlugin.PngImageFile'>`
 
-`__len__()` 함수는 데이터 셋의 크기를 반환하는 함수입니다. **Image Classifer** 로 예를 들면, 우리가 가진 이미지의 갯수가 곧 데이터 셋의 크기를 의미하게 됩니다. 즉 50장을 가지고 있다면 `__len__()` 함수는 50 을 반환해야 합니다.
+`__len__()` 함수는 데이터셋의 크기를 반환하는 함수입니다. **Image Classifier** 로 예를 들면, 우리가 가진 이미지의 갯수가 곧 데이터셋의 크기를 의미하게 됩니다. 즉 50장을 가지고 있다면 `__len__()` 함수는 50 을 반환해야 합니다.
 
-## Programming
+### Programming
+
 
