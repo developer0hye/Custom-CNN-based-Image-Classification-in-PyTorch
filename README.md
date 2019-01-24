@@ -67,7 +67,7 @@ data/
 
 PyTorch 에는 데이터셋에 대한 처리를 용이하게 하기 위하여 **Dataset** 과 **DataLoader** 클래스를 제공합니다.
 
-**Dataset** 클래스는 torch.utils.data.Dataset 에 정의된 추상 클래스(Abstract class) 로써 사용자는 본인이 소유한 데이터를 읽기 위하여 **Dataset** 클래스를 상속받는 클래스를 작성해야 합니다.
+**Dataset** 클래스는 torch.utils.data.Dataset 에 정의된 추상 클래스(Abstract class) 로써 사용자는 **Custom Dataset**를 읽기 위하여 **Dataset** 클래스를 상속받는 클래스를 작성해야 합니다.
 
 **DataLoader**는 **Dataset** 클래스를 상속받는 클래스에 정의된 작업에 따라 데이터를 읽어오며, 이때 설정에 따라 원하는 **배치(Batch) 크기**로 데이터를 읽어올 수 있고 병렬 처리 설정, 데이터 셔플(Shuffle) 등의 작업을 설정할 수 있습니다.
 
@@ -101,4 +101,4 @@ class MyCustomDataset(Dataset):
 
 `__init__()` 함수는 클래스 생성자로써 데이터에 대한 Transform(변환, Augmentation 등)을 설정하고 데이터를 읽기 위한 기초적인 초기화 작업들을 수행하도록 정의합니다.
 
-`__getitem__()` 함수는 **Custom Dataset** 에 존재하는 데이터를 읽고 반환하는 함수입니다. 따라서 본인이 어떤 작업을 수행하는지에 따라 반환하는 값들이 달라질 수 있습니다. 본 튜토리얼에서는 요구하는 작업은 **Image Classifer** 이므로 이미지를 반환하고, 해당 이미지에 맞는 클래스를 반환할 것입니다.
+`__getitem__()` 함수는 **Custom Dataset** 에 존재하는 데이터를 읽고 반환하는 함수입니다. 따라서 본인이 어떤 작업을 수행하는지에 따라 반환하는 값들이 달라질 수 있습니다. 본 튜토리얼에서 요구하는 작업은 **Image Classifer** 이므로 이미지를 반환하고, 해당 이미지가 어떤 클래스에 속하는지에 대한 값을 반환할 것입니다.
