@@ -23,15 +23,15 @@
 
 본 튜토리얼에서는 만화 **"쿠로코의 농구"** 의 등장 인물인 **"쿠로코"** 와 **"카가미"** 를 분류해보겠습니다.
 
-![60136-kuroko_no_basket-blue-basketball](https://user-images.githubusercontent.com/35001605/50537882-8c231a00-0ba9-11e9-8da4-a438b7342c03.jpg)
+![60136-kuroko_no_basket-blue-basketball](https://user-images.githubusercontent.com/35001605/51658134-693e2700-1fea-11e9-8045-b2d49231246f.jpg)
 
 #### Kuroko
 
-![65d739597a4f1bfd7085615cadf2c38e1367394101_full](https://user-images.githubusercontent.com/35001605/50537884-8fb6a100-0ba9-11e9-9d3b-ae820249f4c8.png)
+![65d739597a4f1bfd7085615cadf2c38e1367394101_full](https://user-images.githubusercontent.com/35001605/51658137-6c391780-1fea-11e9-9493-313b93f6166b.png)
 
 #### Kagami
 
-![kurokonobaske_a03](https://user-images.githubusercontent.com/35001605/50537883-8e857400-0ba9-11e9-9982-adedbc1e16f0.jpg)
+![kurokonobaske_a03](https://user-images.githubusercontent.com/35001605/51658140-6e9b7180-1fea-11e9-9804-9ff222d3d079.jpg)
 
 #### Examples
 
