@@ -63,6 +63,30 @@ data/
       *.png
 ```
 
+### Structure of Directory
+
+본 튜토리얼 에서는 **Custom Dataset**에 대한 처리를 보다 쉽게 하기 위하여 다음과 같이 main.py 파일(실제로 코드를 작성할 파일)과 **Custom Dataset**이 동일한 경로에 있음을 가정하겠습니다. 
+
+```python
+
+data/
+  train/
+    kuroko/
+      *.png
+    kagami/
+      *.png
+  test/
+    kuroko/
+      *.png
+    kagami/
+      *.png
+      
+main.py
+```
+
+
+
+
 ## Data Loading and Processing
 
 PyTorch 에는 데이터셋에 대한 처리를 용이하게 하기 위하여 **Dataset** 과 **DataLoader** 클래스를 제공합니다.
@@ -73,7 +97,7 @@ PyTorch 에는 데이터셋에 대한 처리를 용이하게 하기 위하여 **
 
 본 튜토리얼에서는 **Dataset** 클래스를 상속받는 클래스를 **Dataset** 클래스라 칭하도록 하겠습니다.
 
-### Dataset Class
+### Dataset Class & DataLoader Class
 
 **Dataset** 클래스의 형태는 아래와 같습니다.
 
@@ -91,7 +115,7 @@ class MyCustomDataset(Dataset):
     def __len__(self):
         return count # of how many examples(images?) you have
 ```
-**Custom Dataset** 을 읽기 위하여 다음의 3가지 함수를 정의하여야 합니다.
+**Custom Dataset** 을 읽기 위하여 다음의 3가지 함수를 정의해야 합니다.
 
 * `__init__()` 
 
@@ -108,4 +132,6 @@ class MyCustomDataset(Dataset):
 `TypeError: batch must contain tensors, numbers, dicts or lists; found <class 'PIL.PngImagePlugin.PngImageFile'>`
 
 `__len__()` 함수는 데이터 셋의 크기를 반환하는 함수입니다. **Image Classifer** 로 예를 들면, 우리가 가진 이미지의 갯수가 곧 데이터 셋의 크기를 의미하게 됩니다. 즉 50장을 가지고 있다면 `__len__()` 함수는 50 을 반환해야 합니다.
+
+## Programming
 
