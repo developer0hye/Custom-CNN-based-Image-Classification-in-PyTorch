@@ -99,5 +99,8 @@ class MyCustomDataset(Dataset):
 
 * `__len__()`
 
+`__init__()` 함수는 클래스 생성자로써 
+
+`__getitem__()` 함수는 **Custom Dataset** 에 존재하는 데이터를 읽고 반환하는 함수입니다. 따라서 본인이 어떤 작업을 수행하는지에 따라 반환하는 값들이 달라질 수 있습니다. 본 튜토리얼에서는 **Image Classifer**를 만들기 위한 것
 
 
