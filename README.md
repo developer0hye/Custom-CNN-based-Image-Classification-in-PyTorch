@@ -65,7 +65,7 @@ data/
 
 ### Structure of Directory
 
-본 튜토리얼 에서는 **Custom Dataset**에 대한 처리를 보다 쉽게 하기 위하여 다음과 같이 main.py 파일(실제로 코드를 작성할 파일)과 **Custom Dataset**이 동일한 경로에 있음을 가정하겠습니다. 
+본 튜토리얼 에서는 **Custom Dataset**에 대한 처리를 보다 쉽게 하기 위하여 다음과 같이 main.py 파일(코드를 작성할 파일)과 **Custom Dataset**이 동일한 경로에 있음을 가정하겠습니다. 
 
 ```python
 
@@ -165,10 +165,10 @@ class CustomImageDataset(Dataset):
 
         return all_img_files, all_labels, len(all_img_files), len(class_names)
 
-    def __init__(self, data_set_path, transform=None):
+    def __init__(self, data_set_path, transforms=None):
         self.data_set_path = data_set_path
         self.image_files_path, self.labels, self.length, self.num_classes = self.read_data_set()
-        self.transforms = transform
+        self.transforms = transforms
 
     def __getitem__(self, index):
         image = Image.open(self.image_files_path[index])
@@ -183,6 +183,10 @@ class CustomImageDataset(Dataset):
         return self.length
 ```
 
-**Image Classifer**를 위한 **Dataset** 클래스는 위와 같이 구현됩니다.
+**Image Classifer**를 위한 **Dataset** 클래스는 위와 같이 구현되며 실제 객체 생성시에는 아래와 같이 사용됩니다.
 
 
+```python
+custom_dataset_train = CustomImageDataset('./data/train',transforms=transfrom_train)
+custom_dataset_test = CustomImageDataset('./data/train',transforms=transfrom_test)
+```
