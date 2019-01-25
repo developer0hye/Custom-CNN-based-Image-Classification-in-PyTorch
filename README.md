@@ -188,5 +188,5 @@ class CustomImageDataset(Dataset):
 
 ```python
 custom_dataset_train = CustomImageDataset('./data/train',transforms=transfrom_train)
-custom_dataset_test = CustomImageDataset('./data/train',transforms=transfrom_test)
+custom_dataset_test = CustomImageDataset('./data/test',transforms=transfrom_test)
 ```
