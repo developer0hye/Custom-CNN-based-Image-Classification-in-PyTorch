@@ -11,7 +11,7 @@
 
 ## Setup
 
-### Prerequisite
+### Requirements
 
 본 튜토리얼에 앞서 다음의 라이브러리들을 필요로 합니다.
 * PyTorch
@@ -23,13 +23,14 @@
 
 본 튜토리얼에서는 만화 **"쿠로코의 농구"** 의 등장 인물인 **"쿠로코"** 와 **"카가미"** 를 분류해보겠습니다.
 
+**Kuroko's basketball**
 ![60136-kuroko_no_basket-blue-basketball](https://user-images.githubusercontent.com/35001605/51658134-693e2700-1fea-11e9-8045-b2d49231246f.jpg)
 
-#### Kuroko
+**Kuroko**
 
 ![65d739597a4f1bfd7085615cadf2c38e1367394101_full](https://user-images.githubusercontent.com/35001605/51658137-6c391780-1fea-11e9-9493-313b93f6166b.png)
 
-#### Kagami
+**Kagami**
 
 ![kurokonobaske_a03](https://user-images.githubusercontent.com/35001605/51658140-6e9b7180-1fea-11e9-9804-9ff222d3d079.jpg)
 
@@ -190,3 +191,10 @@ class CustomImageDataset(Dataset):
 custom_dataset_train = CustomImageDataset('./data/train',transforms=transfrom_train)
 custom_dataset_test = CustomImageDataset('./data/test',transforms=transfrom_test)
 ```
+
+CustomImageDataset 클래스의 내부를 살펴보시면 생성자(`__init__`)를 통하여 이미지들이 저장된 경로()를 입력받게 됩니다.
+
+```python
+def __init__(self, data_set_path, transforms=None):
+```
+
