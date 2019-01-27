@@ -24,6 +24,7 @@
 본 튜토리얼에서는 만화 **"쿠로코의 농구"** 의 등장 인물인 **"쿠로코"** 와 **"카가미"** 를 분류해보겠습니다.
 
 **Kuroko's basketball**
+
 ![60136-kuroko_no_basket-blue-basketball](https://user-images.githubusercontent.com/35001605/51658134-693e2700-1fea-11e9-8045-b2d49231246f.jpg)
 
 **Kuroko**
