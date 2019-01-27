@@ -193,9 +193,10 @@ custom_dataset_train = CustomImageDataset('./data/train',transforms=transfrom_tr
 custom_dataset_test = CustomImageDataset('./data/test',transforms=transfrom_test)
 ```
 
-CustomImageDataset 클래스의 내부를 살펴보시면 생성자(`__init__`)를 통하여 이미지들이 저장된 경로()를 입력받게 됩니다.
+CustomImageDataset 클래스의 내부를 살펴보면 생성자(`__init__`)를 통하여 이미지들이 저장된 경로(data_set_path)를 입력받게 되고 이 값은 `self.data_set_path` 에 저장됩니다.
 
 ```python
 def __init__(self, data_set_path, transforms=None):
 ```
 
+이 후 `__init__` 함수에서는 `read_data_set` 함수를 호출하고 `self.data_set_path` 에 저장된 경로를 통해 이미지들의 경로(`self.image_files_path`), 각 이미지가 속한 클래스(`self.labels`), 데이터 셋의 크기(`self.length`), 분류하고자 하는 클래스의 갯수(`self.num_classes`) 를 초기화 합니다.
