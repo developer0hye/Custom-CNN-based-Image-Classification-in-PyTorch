@@ -37,7 +37,7 @@
 
 #### Examples
 
-정면 얼굴이 나온 사진을 위주로 쿠로코 60장, 카가미 60 장 수집
+정면 얼굴이 나온 사진 위주로 쿠로코 60장, 카가미 60 장 수집
 
 ![example_dataset3](https://user-images.githubusercontent.com/35001605/51650040-12285a00-1fca-11e9-95d1-189352ef2d58.PNG)
 
