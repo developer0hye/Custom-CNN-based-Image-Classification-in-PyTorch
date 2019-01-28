@@ -143,7 +143,7 @@ from torch.utils.data import Dataset, DataLoader
 from torch import nn
 from torchvision import transforms
 ```
-#### Declaration & Definition classes
+#### Declaration & Definition class
 ```python
 class CustomImageDataset(Dataset):
     def read_data_set(self):
